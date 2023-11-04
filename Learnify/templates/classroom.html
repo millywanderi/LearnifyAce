@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block Home %}
+<div class="container mt-5">
+    <h1>{{ course.name }}</h1>
+    <div>
+        {% for message in messages%}
+        <h3>{{ message }}</h3>
+        {% endfor %}
+        <hr>
+        {% for lesson in lessons %}
+        <div>
+            <h6>Lesson {{ forloop.counter }}</h6>
+            <h3><strong>{{ lessson.title }}</strong></h3>
+            <p>{{ lesson.description }}</p>
+            <hr>
+            <p>{{ lesson.content }}</p>
+        </div>
+        {% empty %}
+        <p>No lesson for now. Check later</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
