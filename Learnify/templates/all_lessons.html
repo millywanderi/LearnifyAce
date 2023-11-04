@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block Home %}
+<section>
+    <div class="container mt-5">
+        <div>
+            <h3>Edit Page</h3>
+            <hr>
+            <h4>lessons</h4>
+            {% for lesson in lessons %}
+            <ul>
+                <li>{{ lesson.title }} <a href="{% url 'edit-lesson' lesson.pk %}">Edit</a> <a href="{% url 'delete-lesson' lesson.pk %}">Delete</a></li>
+            </ul>
+            {% endfor %}
+        </div>  
+    </div>
+</section>
+{% endblock %}
