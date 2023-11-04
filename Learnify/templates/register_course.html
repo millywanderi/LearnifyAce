@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block Home %}
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div>
+                <h1>Register Course</h1>
+            <div>
+                <img class="rounded img-fluid" src="{{ course.image.url }}" width="500">
+                <h2>{{ course.name }}</h2>
+                <p>Date: </p><span>{{ course.startDate }}</span>
+                <p>{{ course.description }}</p>           
+            </div>
+            <div>
+                <form action="{% url 'course-register' course.pk %}" method="POST">
+                    {% csrf_token %}
+                    <button class="btn btn-primary" type="submit">Confirm Course Registration</button>
+                </form>
+            </div>
+            </div>   
+        </div>
+        
+    </div>
+</section>
+
+{% endblock %}
