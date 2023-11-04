@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block Home %}
+<form action="{% url 'edit-lesson' lesson.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}
