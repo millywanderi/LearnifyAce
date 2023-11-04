@@ -1,0 +1,5 @@
+../env
+LearnifyAce/__pycache__/
+LearnifyAce/migrations/__pycache__/
+mysite.log
+LearnifyAce/.env
