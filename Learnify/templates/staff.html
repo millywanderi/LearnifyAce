@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block Home %}
+<h3>Edit Page</h3>
+<hr>
+<h4>courses</h4>
+{% for course in courses %}
+<ul>
+    <li>{{ course.name }} <a href="{% url 'edit-course' course.pk %}">Edit</a> <a href={% url 'delete-course' course.pk %}>Delete</a></li>
+</ul>
+{% endfor %}
+{% endblock %}
