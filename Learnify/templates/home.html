@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block Home %}
+
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            {% for course in courses %}
+            <div class="border col-md-6">
+                <a href="{% url 'course-register' course.pk %}"><img class="img-fluid rounded" src="{{ course.image.url }}"></a>
+                <h2>{{ course.name }}</h2>
+                <p>Date: </p><span>{{ course.startDate }}</span>
+                <p>{{ course.description }}</p>           
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
