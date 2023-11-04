@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block Home %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6 card">
+            <div>
+                <h3 class="text-center">Login</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="p-2 form-group">
+                        <input class="form-control" type="text" name="username" placeholder="Username" required/>
+                    </div>
+                    <div class="p-2 form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Password" required/>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn-lg bg-success" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
