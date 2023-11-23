@@ -32,4 +32,4 @@ We welcome contributions from the open-source community. If you're interested in
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.md).
